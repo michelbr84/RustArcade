@@ -1,0 +1,38 @@
+schema_version = 1
+id = "rebels-in-the-sky"
+name = "Rebels in the Sky"
+summary = "Space pirates playing basketball across the galaxy, peer-to-peer."
+description = """
+Manage a crew of space pirates, travel between planets, trade, and play basketball
+matches against other crews. Works fully offline against local teams; optional
+peer-to-peer networking lets you challenge other players. Under heavy development,
+so save files may break between versions.
+"""
+repository = "https://github.com/ricott1/rebels-in-the-sky"
+license = "GPL-3.0-or-later"
+authors = ["ricott1"]
+categories = ["sports", "simulation", "multiplayer"]
+tags = ["basketball", "p2p", "management", "ratatui"]
+support_status = "verified"
+verified_on = "2026-08-27"
+notes = "Use `-l` to disable networking and `-a` to disable audio. The prebuilt Linux binary links libasound2 (ALSA)."
+
+[compatibility]
+os = ["linux", "macos", "windows"]
+min_terminal = { cols = 160, rows = 48 }
+
+[requirements]
+notes = "Linux prebuilt binaries need the libasound2 runtime library. Audio and network are optional."
+
+[run]
+executable = "rebels"
+
+[[installers]]
+type = "github-release"
+repository = "ricott1/rebels-in-the-sky"
+asset = "rebels-{tag}-{target}.tar.gz"
+
+[[installers]]
+type = "cargo"
+crate = "rebels"
+warnings = ["Compiling needs cmake, a C compiler and, on Linux, libasound2-dev with pkg-config. Expect a long build."]

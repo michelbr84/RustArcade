@@ -1,0 +1,33 @@
+schema_version = 1
+id = "sudoku-tui"
+name = "Sudoku TUI"
+summary = "A terminal Sudoku with pencil marks, hints, and optional online multiplayer."
+description = """
+Solve generated Sudoku puzzles in a clean Ratatui interface with notes, hints and
+timers. Single-player works fully offline; an optional multiplayer mode connects
+to the author's server using a GitHub login.
+"""
+repository = "https://github.com/Dalje-et/sudoku-tui"
+license = "MIT (README-declared, no license file)"
+categories = ["puzzle", "board"]
+tags = ["sudoku", "ratatui"]
+support_status = "verified"
+verified_on = "2026-08-27"
+notes = "Not published on crates.io: the `sudoku-tui` crate there is an unrelated project, so RustArcade never uses the Cargo installer for this game."
+
+[compatibility]
+os = ["linux", "macos"]
+
+[run]
+executable = "sudoku-tui"
+
+[[installers]]
+type = "github-release"
+repository = "Dalje-et/sudoku-tui"
+asset = "sudoku-tui-{target}.tar.gz"
+
+[[installers]]
+type = "git-cargo-build"
+repository = "https://github.com/Dalje-et/sudoku-tui"
+package = "sudoku-tui"
+warnings = ["Compiling needs a C compiler (TLS libraries are built from source)."]

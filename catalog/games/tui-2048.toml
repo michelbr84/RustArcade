@@ -1,0 +1,25 @@
+schema_version = 1
+id = "tui-2048"
+name = "2048 TUI"
+summary = "The 2048 sliding-tile puzzle, 100% Rust."
+description = """
+Slide numbered tiles and merge them to reach 2048. A small, keyboard-driven
+implementation on the classic tui-rs/termion stack (Unix terminals only).
+"""
+repository = "https://github.com/WanderHuang/game-2048-tui"
+license = "MIT (README-declared, no license file)"
+categories = ["puzzle", "board", "classic"]
+tags = ["2048", "termion"]
+support_status = "verified"
+verified_on = "2026-08-27"
+notes = "Built from source only: the project is not on crates.io and its GitHub release contains a single macOS binary without platform metadata."
+
+[compatibility]
+os = ["linux", "macos"]
+
+[run]
+executable = "tui-2048"
+
+[[installers]]
+type = "git-cargo-build"
+repository = "https://github.com/WanderHuang/game-2048-tui"

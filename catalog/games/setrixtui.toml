@@ -1,0 +1,31 @@
+schema_version = 1
+id = "setrixtui"
+name = "Setrixtui"
+summary = "Falling-sand Tetris: pieces dissolve into sand and colours must connect across."
+description = """
+A Setris/Sandtrix-style puzzle in Ratatui. Tetrominoes turn into sand when they
+lock; clear lines by connecting one colour from the left edge to the right edge.
+Endless, timed and 40-lines modes, difficulty levels, themes and vim keys.
+"""
+repository = "https://github.com/Mjoyufull/Setrixtui"
+license = "GPL-3.0-or-later"
+categories = ["puzzle", "arcade"]
+tags = ["tetris", "sand", "ratatui"]
+support_status = "verified"
+verified_on = "2026-08-27"
+
+[compatibility]
+os = ["linux", "macos", "windows"]
+
+[run]
+executable = "setrixtui"
+
+[[installers]]
+type = "cargo"
+crate = "setrixtui"
+warnings = ["Compiling requires Rust 1.90 or newer."]
+
+[[installers]]
+type = "git-cargo-build"
+repository = "https://github.com/Mjoyufull/Setrixtui"
+warnings = ["Compiling requires Rust 1.90 or newer."]

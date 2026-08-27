@@ -1,0 +1,40 @@
+schema_version = 1
+id = "mastermind-rs"
+name = "Mastermind"
+summary = "Crack the secret code in this Mastermind / Bulls & Cows TUI."
+description = """
+Guess a randomly generated code with configurable length and digit range using
+bulls-and-cows style feedback. Built with the cursive toolkit.
+"""
+repository = "https://github.com/hiimsergey/mastermind-rs"
+license = "GPL-3.0 (Cargo.toml-declared)"
+categories = ["puzzle", "board"]
+tags = ["mastermind", "bulls-and-cows", "cursive"]
+support_status = "verified"
+verified_on = "2026-08-27"
+notes = "The crates.io release (0.2.10) is older than the GitHub v1.0.0 sources; RustArcade prefers building the tagged sources."
+
+[compatibility]
+os = ["linux", "macos", "windows"]
+
+[run]
+executable = "mastermind-rs"
+
+[[installers]]
+type = "git-cargo-build"
+repository = "https://github.com/hiimsergey/mastermind-rs"
+reference = "v1.0.0"
+
+[[installers]]
+type = "github-release"
+repository = "hiimsergey/mastermind-rs"
+os = ["linux", "windows"]
+
+[installers.asset_patterns]
+linux-x86_64 = "mastermind-rs_{tag}_linux"
+windows-x86_64 = "mastermind-rs_{tag}.exe"
+
+[[installers]]
+type = "cargo"
+crate = "mastermind-rs"
+warnings = ["The crates.io release is an older version with a different interface."]

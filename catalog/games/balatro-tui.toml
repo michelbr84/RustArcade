@@ -1,0 +1,31 @@
+schema_version = 1
+id = "balatro-tui"
+name = "BalatroTUI"
+summary = "A terminal clone of the poker roguelike Balatro."
+description = """
+Build poker hands, chase blinds and multipliers in a text-mode homage to Balatro.
+The project is a work in progress and needs a large terminal (at least 150x40).
+"""
+repository = "https://github.com/Passeriform/BalatroTUI"
+license = "GPL-3.0"
+categories = ["card", "roguelike", "strategy"]
+tags = ["balatro", "poker", "ratatui"]
+support_status = "verified"
+verified_on = "2026-08-27"
+
+[compatibility]
+os = ["linux", "macos", "windows"]
+min_terminal = { cols = 150, rows = 40 }
+
+[run]
+executable = "balatro_tui"
+
+[[installers]]
+type = "cargo"
+crate = "balatro_tui"
+locked = true
+
+[[installers]]
+type = "git-cargo-build"
+repository = "https://github.com/Passeriform/BalatroTUI"
+package = "balatro_tui"

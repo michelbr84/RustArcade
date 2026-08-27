@@ -1,0 +1,25 @@
+schema_version = 1
+id = "retris"
+name = "Retris"
+summary = "A Tetris clone with slam-to-edge and 180-degree rotation shortcuts."
+description = """
+Tetris for the terminal built on cursive. Slam pieces to the leftmost or
+rightmost column, rotate both ways, flip 180 degrees, and clear 40 lines to win.
+"""
+repository = "https://github.com/genieCS/retris"
+license = "MIT"
+categories = ["puzzle", "arcade"]
+tags = ["tetris", "cursive"]
+support_status = "verified"
+verified_on = "2026-08-27"
+notes = "The GitHub sources now target WebAssembly; the crates.io 0.3.0 release is the terminal version, so only the Cargo installer is offered."
+
+[compatibility]
+os = ["linux", "macos", "windows"]
+
+[run]
+executable = "retris"
+
+[[installers]]
+type = "cargo"
+crate = "retris"

@@ -1,0 +1,40 @@
+schema_version = 1
+id = "termfarm"
+name = "TermFarm"
+summary = "A relaxing idle farming game that lives in your terminal."
+description = """
+Plant, wait, harvest and sell. TermFarm is an idle farming game with a Ratatui
+interface and a plain command-line mode for quick actions. Progress is saved in
+your user data directory and keeps growing while you are away.
+"""
+repository = "https://github.com/indium114/termfarm"
+license = "MIT"
+categories = ["idle", "simulation"]
+tags = ["farming", "idle-game", "ratatui"]
+support_status = "verified"
+verified_on = "2026-08-27"
+
+[compatibility]
+os = ["linux", "macos", "windows"]
+
+[run]
+executable = "termfarm"
+
+[[installers]]
+type = "github-release"
+repository = "indium114/termfarm"
+checksum_asset = "termfarm_{version}_checksums.txt"
+os = ["linux", "windows"]
+
+[installers.asset_patterns]
+linux-x86_64 = "termfarm_Linux_x86_64"
+linux-aarch64 = "termfarm_Linux_arm64"
+windows-x86_64 = "termfarm_Windows_x86_64.exe"
+
+[[installers]]
+type = "cargo"
+crate = "termfarm"
+
+[[installers]]
+type = "git-cargo-build"
+repository = "https://github.com/indium114/termfarm"

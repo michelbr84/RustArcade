@@ -1,0 +1,30 @@
+schema_version = 1
+id = "gof-rs"
+name = "Game of Life (gof-rs)"
+summary = "Conway's Game of Life with more than 500 built-in patterns."
+description = """
+Browse a library of over five hundred classic Game of Life patterns and watch them
+evolve in the terminal. Best enjoyed in a large window with a font that renders
+wide block glyphs.
+"""
+repository = "https://github.com/omagdy7/gof-rs"
+license = "MIT"
+categories = ["simulation", "classic"]
+tags = ["game-of-life", "cellular-automaton", "ratatui"]
+support_status = "verified"
+verified_on = "2026-08-27"
+
+[compatibility]
+os = ["linux", "macos", "windows"]
+min_terminal = { cols = 150, rows = 48 }
+
+[run]
+executable = "gof-rs"
+
+[[installers]]
+type = "cargo"
+crate = "gof-rs"
+
+[[installers]]
+type = "git-cargo-build"
+repository = "https://github.com/omagdy7/gof-rs"

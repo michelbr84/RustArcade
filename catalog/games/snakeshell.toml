@@ -1,0 +1,28 @@
+schema_version = 1
+id = "snakeshell"
+name = "SnakeShell"
+summary = "The classic Snake game, right in your shell."
+description = """
+A small, dependency-light Snake implementation using crossterm. Move with W/A/S/D,
+eat, grow, and try not to bite your own tail.
+"""
+repository = "https://github.com/iShibi/snakeshell"
+license = "MIT"
+categories = ["arcade", "classic"]
+tags = ["snake", "crossterm"]
+support_status = "verified"
+verified_on = "2026-08-27"
+
+[compatibility]
+os = ["linux", "macos", "windows"]
+
+[run]
+executable = "snakeshell"
+
+[[installers]]
+type = "cargo"
+crate = "snakeshell"
+
+[[installers]]
+type = "git-cargo-build"
+repository = "https://github.com/iShibi/snakeshell"

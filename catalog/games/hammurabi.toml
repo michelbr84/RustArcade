@@ -1,0 +1,40 @@
+schema_version = 1
+id = "hammurabi"
+name = "Hammurabi"
+summary = "Rule ancient Sumer in a modern remake of the 1968 classic."
+description = """
+Manage grain, land and people for ten years as the ruler of Sumer. A faithful
+recreation of the 1968 BASIC classic with a modern Ratatui interface, seeded
+games and an unlimited mode.
+"""
+repository = "https://github.com/stjepangolemac/hammurabi"
+license = "MIT"
+categories = ["strategy", "simulation", "classic"]
+tags = ["retro", "text-game", "ratatui"]
+support_status = "verified"
+verified_on = "2026-08-27"
+
+[compatibility]
+os = ["linux", "macos", "windows"]
+min_terminal = { cols = 40, rows = 20 }
+
+[run]
+executable = "hammurabi"
+
+[[installers]]
+type = "github-release"
+repository = "stjepangolemac/hammurabi"
+
+[installers.asset_patterns]
+linux-x86_64 = "hammurabi-linux-amd64.tar.gz"
+macos-x86_64 = "hammurabi-macos-amd64.tar.gz"
+macos-aarch64 = "hammurabi-macos-aarch64.tar.gz"
+windows-x86_64 = "hammurabi-windows-amd64.zip"
+
+[[installers]]
+type = "cargo"
+crate = "hammurabi"
+
+[[installers]]
+type = "git-cargo-build"
+repository = "https://github.com/stjepangolemac/hammurabi"

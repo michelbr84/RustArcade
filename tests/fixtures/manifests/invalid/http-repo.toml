@@ -1,0 +1,17 @@
+schema_version = 1
+id = "http-repo"
+name = "HTTP Repo"
+summary = "Uses plain HTTP."
+repository = "http://github.com/example/http-repo"
+categories = ["arcade"]
+
+[compatibility]
+os = ["linux"]
+
+[run]
+executable = "../../usr/bin/sh"
+
+[[installers]]
+type = "github-release"
+repository = "example/http-repo"
+binary = "/usr/bin/sh"

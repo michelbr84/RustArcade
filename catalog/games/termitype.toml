@@ -1,0 +1,40 @@
+schema_version = 1
+id = "termitype"
+name = "termitype"
+summary = "A typing test game for the terminal, inspired by Monkeytype."
+description = """
+Measure and improve your typing speed without leaving the terminal. Timed and
+word-count modes, many languages and themes, cursor styles, and a results history
+stored locally.
+"""
+repository = "https://github.com/emanuel2718/termitype"
+license = "GPL-3.0"
+authors = ["Emanuel Ramirez"]
+categories = ["typing", "arcade"]
+tags = ["typing-test", "monkeytype", "ratatui"]
+support_status = "verified"
+verified_on = "2026-08-27"
+
+[compatibility]
+os = ["linux", "macos", "windows"]
+
+[run]
+executable = "termitype"
+
+[[installers]]
+type = "github-release"
+repository = "emanuel2718/termitype"
+asset = "termitype-{tag}-{target}.{ext}"
+checksum_asset = "{asset}.sha256"
+
+[[installers]]
+type = "cargo"
+crate = "termitype"
+bins = ["termitype"]
+warnings = ["Compiling needs a C compiler (SQLite is built from source)."]
+
+[[installers]]
+type = "git-cargo-build"
+repository = "https://github.com/emanuel2718/termitype"
+bins = ["termitype"]
+warnings = ["Compiling needs a C compiler (SQLite is built from source)."]

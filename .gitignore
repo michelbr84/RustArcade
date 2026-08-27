@@ -1,0 +1,49 @@
+# Rust build output
+/target/
+**/target/
+**/*.rs.bk
+
+# Local RustArcade data created during manual testing
+/.rustarcade-home/
+/rustarcade-home/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+/logs/
+/tmp/
+
+
+# Editors and IDEs
+.idea/
+.vscode/
+*.iml
+.fleet/
+*.code-workspace
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment files and credentials (never commit secrets)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.token
+secrets.*
+
+# Coverage and profiling
+*.profraw
+*.profdata
+/coverage/
+/lcov.info
+
+# Local tool state
+.claude/settings.local.json

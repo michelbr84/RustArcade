@@ -1,0 +1,29 @@
+schema_version = 1
+id = "snakers"
+name = "Snakers"
+summary = "The Snake game like in the old days, with a Ratatui interface."
+description = """
+A compact Snake clone. Steer with the arrow keys or hjkl, restart with r, quit
+with q. Note that the interface is drawn on stderr, which RustArcade keeps attached
+to your terminal.
+"""
+repository = "https://github.com/pythops/snakers"
+license = "AGPL-3.0"
+categories = ["arcade", "classic"]
+tags = ["snake", "ratatui"]
+support_status = "verified"
+verified_on = "2026-08-27"
+
+[compatibility]
+os = ["linux", "macos", "windows"]
+
+[run]
+executable = "snakers"
+
+[[installers]]
+type = "cargo"
+crate = "snakers"
+
+[[installers]]
+type = "git-cargo-build"
+repository = "https://github.com/pythops/snakers"

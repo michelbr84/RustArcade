@@ -1,0 +1,25 @@
+schema_version = 1
+id = "new-connect-four"
+name = "Connect Four"
+summary = "A polished two-player Connect Four for Unix terminals."
+description = """
+Drop discs and connect four in a row. Local hotseat play for two people with a
+clean termion interface; pick a column with the number keys or arrows and drop
+with Enter.
+"""
+repository = "https://github.com/Dot32Dev/new_connect_four"
+categories = ["board", "classic"]
+tags = ["connect-four", "termion", "hotseat"]
+support_status = "verified"
+verified_on = "2026-08-27"
+notes = "The upstream repository has no license file. Built from source only (no releases, not on crates.io)."
+
+[compatibility]
+os = ["linux", "macos"]
+
+[run]
+executable = "new_connect_four"
+
+[[installers]]
+type = "git-cargo-build"
+repository = "https://github.com/Dot32Dev/new_connect_four"

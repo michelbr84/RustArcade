@@ -1,0 +1,38 @@
+schema_version = 1
+id = "terminal-poker"
+name = "Terminal Poker"
+summary = "Heads-up No-Limit Texas Hold'em against a configurable bot."
+description = """
+Practice heads-up no-limit hold'em in the terminal against a rule-based opponent
+with adjustable aggression. Tracks VPIP, PFR, 3-bet and c-bet percentages and
+BB/100 across sessions.
+"""
+repository = "https://github.com/ashxudev/terminal-poker"
+license = "MIT"
+categories = ["card", "strategy"]
+tags = ["poker", "holdem", "ratatui"]
+support_status = "verified"
+verified_on = "2026-08-27"
+notes = "The crate ships two executables (`terminal-poker` and `poker`); RustArcade installs `terminal-poker`."
+
+[compatibility]
+os = ["linux", "macos", "windows"]
+
+[run]
+executable = "terminal-poker"
+
+[[installers]]
+type = "github-release"
+repository = "ashxudev/terminal-poker"
+asset = "terminal-poker-{target}.{ext}"
+checksum_asset = "{asset}.sha256"
+
+[[installers]]
+type = "cargo"
+crate = "terminal-poker"
+bins = ["terminal-poker"]
+
+[[installers]]
+type = "git-cargo-build"
+repository = "https://github.com/ashxudev/terminal-poker"
+bins = ["terminal-poker"]

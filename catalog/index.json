@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-08-27T20:29:15.082956428Z",
+  "games": [
+    {
+      "file": "balatro-tui.toml",
+      "id": "balatro-tui",
+      "sha256": "f914dd5d0515a62bb0f29f69fbdfe87cd86b887fad35d5e8db94d7c84455d7ee",
+      "size": 837
+    },
+    {
+      "file": "chess-tui.toml",
+      "id": "chess-tui",
+      "sha256": "cc092fd2bc139a564a08343084488285540b7628f529039e9eb492169f89f9fa",
+      "size": 1993
+    },
+    {
+      "file": "go-tui.toml",
+      "id": "go-tui",
+      "sha256": "f187ba8976803f8af997fcab908f881b164bf7bd5f407a5415c65c37d1b6762a",
+      "size": 976
+    },
+    {
+      "file": "gof-rs.toml",
+      "id": "gof-rs",
+      "sha256": "a35bb6790f2ceee0bbfffd98340b51dbab79b4c475fbcd5887c3f5f0f13109ce",
+      "size": 816
+    },
+    {
+      "file": "hammurabi.toml",
+      "id": "hammurabi",
+      "sha256": "0210e1597cde36971e7c318a49d4aad545a3f1c889f69c1571e5623906200f22",
+      "size": 1126
+    },
+    {
+      "file": "mastermind-rs.toml",
+      "id": "mastermind-rs",
+      "sha256": "299734d89f558acd00867308b8e608236a8435e73f1f54ef89329c5033435d46",
+      "size": 1237
+    },
+    {
+      "file": "new-connect-four.toml",
+      "id": "new-connect-four",
+      "sha256": "9b9dd34bd5d70e9df04fbbb2b6c2f4afd729a5fcbee76703a02c114865356b0f",
+      "size": 811
+    },
+    {
+      "file": "rebels-in-the-sky.toml",
+      "id": "rebels-in-the-sky",
+      "sha256": "f1d7a5db916c3ab45678cf54962330c7fce54507bbc3c5c75855060ef9444078",
+      "size": 1378
+    },
+    {
+      "file": "retris.toml",
+      "id": "retris",
+      "sha256": "4bc3479f6d160fe11c86a88483b05048ab95467ff0319638ac492bdcf35ce844",
+      "size": 763
+    },
+    {
+      "file": "rusty-lights.toml",
+      "id": "rusty-lights",
+      "sha256": "5b4b6235ebf07b7298f4f15281d0b0a4c8f8aa4796ffd32bd1d01e2ff6d648db",
+      "size": 778
+    },
+    {
+      "file": "setrixtui.toml",
+      "id": "setrixtui",
+      "sha256": "11d9fbb072591697d9b0d2863712a90f3827b39597d95f23d8de4204d971f379",
+      "size": 952
+    },
+    {
+      "file": "snakers.toml",
+      "id": "snakers",
+      "sha256": "fcd8f1de6bcc7b77327647af3944d951388c098aaf12ed437c1d77b0a1544a15",
+      "size": 740
+    },
+    {
+      "file": "snakeshell.toml",
+      "id": "snakeshell",
+      "sha256": "181dd7ee59e4eb41429068321d69bd056afc2c7626a31a4fac648e4b0865effe",
+      "size": 683
+    },
+    {
+      "file": "sudoku-tui.toml",
+      "id": "sudoku-tui",
+      "sha256": "a2abd7c3334fd541af8d773f942eba3bf684016ad61d15f4889c451b664b2689",
+      "size": 1137
+    },
+    {
+      "file": "termfarm.toml",
+      "id": "termfarm",
+      "sha256": "dc7e2b68262762abda360ca13f18fdf1d2f7b5aaf44736ebc2da716e562194aa",
+      "size": 1103
+    },
+    {
+      "file": "terminal-poker.toml",
+      "id": "terminal-poker",
+      "sha256": "011adf31a3f3f7c4e3accdde69ddcd9fb77a31487fbb5b4b2434eb2968722a49",
+      "size": 1104
+    },
+    {
+      "file": "termitype.toml",
+      "id": "termitype",
+      "sha256": "396a7edb05955bf08f013c82f2efa3531eaa899d4cd6e0b1b280800b28a7ebd7",
+      "size": 1145
+    },
+    {
+      "file": "tetro-tui.toml",
+      "id": "tetro-tui",
+      "sha256": "1e66b569980e0c3f0cd7f9c95edba7787403a8cec8e3272a4b50be361109ca61",
+      "size": 1145
+    },
+    {
+      "file": "tmaze.toml",
+      "id": "tmaze",
+      "sha256": "30381a999b0ab9f52f319ce538b9c9674eaea816ad54af8e0e4940bf50ef0f65",
+      "size": 1449
+    },
+    {
+      "file": "tui-2048.toml",
+      "id": "tui-2048",
+      "sha256": "4d93b052560bc0e6cd70ad1621f2751f869afd4b704e91b828ba4740fc457c7c",
+      "size": 835
+    }
+  ]
+}

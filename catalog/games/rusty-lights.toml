@@ -1,0 +1,29 @@
+schema_version = 1
+id = "rusty-lights"
+name = "Rusty Lights"
+summary = "The Lights Out puzzle with vim keys and an optional solver."
+description = """
+Toggle lights to switch the whole board off. Supports custom board sizes, a
+variant mode that flips whole rows and columns, and a linear-algebra solver you
+can enable when you get stuck.
+"""
+repository = "https://github.com/Arom1a/rusty-lights"
+license = "MIT"
+categories = ["puzzle", "board"]
+tags = ["lights-out", "logic", "ratatui"]
+support_status = "verified"
+verified_on = "2026-08-27"
+
+[compatibility]
+os = ["linux", "macos", "windows"]
+
+[run]
+executable = "rusty-lights"
+
+[[installers]]
+type = "cargo"
+crate = "rusty-lights"
+
+[[installers]]
+type = "git-cargo-build"
+repository = "https://github.com/Arom1a/rusty-lights"

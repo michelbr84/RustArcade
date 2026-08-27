@@ -1,0 +1,59 @@
+schema_version = 1
+id = "chess-tui"
+name = "Chess TUI"
+summary = "Play chess in any terminal: local games, UCI engines, Lichess and online play."
+description = """
+A full-featured chess client for the terminal built with Ratatui. Play against a
+friend on the same machine, against any UCI engine (for example Stockfish), on
+Lichess with an API token, or online against other chess-tui players. Includes a
+PGN viewer, skins, and optional sound.
+"""
+repository = "https://github.com/thomas-mauran/chess-tui"
+license = "MIT"
+authors = ["Thomas Mauran"]
+categories = ["board", "strategy", "multiplayer"]
+tags = ["chess", "lichess", "stockfish", "ratatui"]
+support_status = "verified"
+verified_on = "2026-08-27"
+notes = "Bot mode requires a UCI engine such as Stockfish (pass it with `-e`). The prebuilt Linux binary links libasound2 (ALSA)."
+
+[compatibility]
+os = ["linux", "macos", "windows"]
+min_terminal = { cols = 80, rows = 24 }
+
+[requirements]
+optional_commands = ["stockfish"]
+notes = "Optional: Stockfish (or another UCI engine) for playing against the computer. Linux prebuilt binaries need the libasound2 runtime library."
+
+[run]
+executable = "chess-tui"
+
+[[installers]]
+type = "github-release"
+repository = "thomas-mauran/chess-tui"
+asset = "chess-tui-{version}-{target}.tar.gz"
+
+[[installers]]
+type = "cargo"
+crate = "chess-tui"
+os = ["macos", "windows"]
+warnings = ["Compiling on Windows requires the MSVC build tools."]
+
+[[installers]]
+type = "cargo"
+crate = "chess-tui"
+os = ["linux"]
+default_features = false
+warnings = ["Built without the `sound` feature so that the ALSA development headers are not required."]
+
+[[installers]]
+type = "git-cargo-build"
+repository = "https://github.com/thomas-mauran/chess-tui"
+os = ["macos", "windows"]
+
+[[installers]]
+type = "git-cargo-build"
+repository = "https://github.com/thomas-mauran/chess-tui"
+os = ["linux"]
+default_features = false
+warnings = ["Built without the `sound` feature so that the ALSA development headers are not required."]

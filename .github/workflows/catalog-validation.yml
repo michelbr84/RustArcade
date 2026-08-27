@@ -1,0 +1,38 @@
+name: Catalog validation
+
+on:
+  pull_request:
+    paths:
+      - "catalog/**"
+      - "src/catalog/**"
+      - ".github/workflows/catalog-validation.yml"
+  push:
+    branches: [main]
+    paths:
+      - "catalog/**"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate manifests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - name: Build
+        run: cargo build --locked
+      - name: Validate every manifest
+        run: cargo run --locked -- catalog validate catalog/games
+      - name: Validate the embedded catalog
+        run: cargo run --locked -- catalog validate
+      - name: Check index.json is current
+        run: cargo run --locked -- catalog index --check
+      - name: Forbid shell snippets in manifests
+        run: |
+          if grep -rEn 'sh -c|bash -c|curl .*\| *sh|install *= *"' catalog/games; then
+            echo "::error::manifests must not contain shell commands"
+            exit 1
+          fi

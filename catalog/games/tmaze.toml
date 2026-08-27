@@ -1,0 +1,49 @@
+schema_version = 1
+id = "tmaze"
+name = "TMaze"
+summary = "Solve procedurally generated mazes, including 3D ones, in the terminal."
+description = """
+TMaze combines several maze-generation algorithms with a responsive terminal
+interface: configurable sizes and colours, timers, move counters, spectator mode,
+multi-floor and 3D mazes, and optional music.
+"""
+repository = "https://github.com/ur-fault/TMaze"
+license = "MIT-derived (custom clause: must remain free of charge)"
+categories = ["puzzle", "arcade"]
+tags = ["maze", "crossterm"]
+support_status = "verified"
+verified_on = "2026-08-27"
+notes = "The prebuilt Linux binary links libasound2 (ALSA)."
+
+[compatibility]
+os = ["linux", "macos", "windows"]
+
+[requirements]
+notes = "Linux prebuilt binaries need the libasound2 runtime library."
+
+[run]
+executable = "tmaze"
+
+[[installers]]
+type = "github-release"
+repository = "ur-fault/TMaze"
+
+[installers.asset_patterns]
+linux-x86_64 = "tmaze_linux-x86_64_{version}"
+linux-aarch64 = "tmaze_linux-aarch64_{version}"
+macos-x86_64 = "tmaze_macos-x86_64_{version}"
+macos-aarch64 = "tmaze_macos-aarch64_{version}"
+windows-x86_64 = "tmaze_windows-x86_64_{version}.exe"
+
+[[installers]]
+type = "cargo"
+crate = "tmaze"
+os = ["macos", "windows"]
+
+[[installers]]
+type = "cargo"
+crate = "tmaze"
+os = ["linux"]
+default_features = false
+features = ["updates"]
+warnings = ["Built without the `sound` feature so that the ALSA development headers are not required."]

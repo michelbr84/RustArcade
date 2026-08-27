@@ -1,0 +1,30 @@
+schema_version = 1
+id = "go-tui"
+name = "Go TUI"
+summary = "Play Go (Baduk) against a built-in MCTS engine or GNU Go."
+description = """
+A terminal Go board with a complete rules engine, configurable board sizes, ten
+strength levels of built-in Monte-Carlo AI, SGF save/load, review mode with an
+evaluation bar, and optional support for external GTP engines such as GNU Go.
+"""
+repository = "https://github.com/rs-jensen/go-game-tui"
+license = "MIT"
+categories = ["board", "strategy"]
+tags = ["go", "baduk", "weiqi", "ratatui"]
+support_status = "verified"
+verified_on = "2026-08-27"
+notes = "Built from the latest sources: the project has no releases or crates.io package yet."
+
+[compatibility]
+os = ["linux", "macos", "windows"]
+
+[requirements]
+optional_commands = ["gnugo"]
+notes = "Optional: GNU Go or another GTP engine for a stronger opponent."
+
+[run]
+executable = "go-tui"
+
+[[installers]]
+type = "git-cargo-build"
+repository = "https://github.com/rs-jensen/go-game-tui"

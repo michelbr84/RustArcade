@@ -1,0 +1,38 @@
+schema_version = 1
+id = "tetro-tui"
+name = "Tetro TUI"
+summary = "A modern, customizable tetromino-stacking game for the terminal."
+description = """
+Terminal-based but modern tetromino stacking with Marathon, 40-Lines, Classic,
+Master, Puzzle, Cheese, Survival, Combo and Custom modes, replays, highscores and
+detailed statistics. Precise DAS/ARR handling works best in terminals that support
+the kitty keyboard protocol, but the game runs everywhere.
+"""
+repository = "https://github.com/Strophox/tetro-tui"
+license = "MIT"
+authors = ["Strophox"]
+categories = ["puzzle", "arcade", "classic"]
+tags = ["tetris", "tetromino", "crossterm"]
+support_status = "verified"
+verified_on = "2026-08-27"
+
+[compatibility]
+os = ["linux", "macos", "windows"]
+
+[run]
+executable = "tetro-tui"
+
+[[installers]]
+type = "github-release"
+repository = "Strophox/tetro-tui"
+asset = "tetro-tui-{tag}-{target}.{ext}"
+
+[[installers]]
+type = "cargo"
+crate = "tetro-tui"
+warnings = ["Compiling requires Rust 1.95 or newer."]
+
+[[installers]]
+type = "git-cargo-build"
+repository = "https://github.com/Strophox/tetro-tui"
+warnings = ["Compiling requires Rust 1.95 or newer."]

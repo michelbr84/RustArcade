@@ -1,0 +1,16 @@
+schema_version = 2
+id = "bad-schema"
+name = "Bad Schema"
+summary = "Future schema."
+repository = "https://github.com/example/bad-schema"
+categories = ["arcade"]
+
+[compatibility]
+os = ["linux"]
+
+[run]
+executable = "bad-schema"
+
+[[installers]]
+type = "flatpak"
+name = "org.example.Game"

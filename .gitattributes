@@ -1,0 +1,5 @@
+# Normalise line endings; Markdown uses trailing double spaces for hard line breaks.
+*        text=auto eol=lf
+*.md     whitespace=-trailing-space
+*.png    binary
+*.gif    binary
