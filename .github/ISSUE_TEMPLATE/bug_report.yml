@@ -1,0 +1,49 @@
+name: Bug report
+description: Something in RustArcade does not work as documented.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Problems with a *game* itself (crashes inside the game, gameplay
+        bugs) belong to that game's project; this tracker covers the launcher.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, what happened instead?
+    validations:
+      required: true
+  - type: input
+    id: game
+    attributes:
+      label: Game id (if any)
+      placeholder: chess-tui
+  - type: textarea
+    id: doctor
+    attributes:
+      label: Output of `rustarcade doctor --json`
+      description: Paste it as-is; it contains no secrets (directory paths and tool versions only).
+      render: json
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Relevant log
+      description: |
+        For install/update failures the error message shows a log path
+        (`~/.local/state/rustarcade/logs/install-<id>-<timestamp>.log`). Paste the tail of it.
+      render: text
+  - type: input
+    id: terminal
+    attributes:
+      label: Terminal emulator (and multiplexer, if any)
+      placeholder: kitty 0.35 / tmux 3.4
+  - type: input
+    id: version
+    attributes:
+      label: RustArcade version (`rustarcade version`)
+      placeholder: rustarcade 0.1.0
+    validations:
+      required: true

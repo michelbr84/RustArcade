@@ -1,0 +1,7 @@
+# Default owner for everything in the repository.
+* @michelbr84
+
+# Catalog changes deserve an extra look at installer safety.
+/catalog/ @michelbr84
+/src/catalog/ @michelbr84
+/src/install/ @michelbr84

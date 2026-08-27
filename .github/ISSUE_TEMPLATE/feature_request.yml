@@ -1,0 +1,25 @@
+name: Feature request
+description: Propose an improvement to the launcher.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe the situation, not just the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behaviour
+      description: How should RustArcade behave? Which screens, commands or manifest fields are involved?
+    validations:
+      required: true
+  - type: textarea
+    id: security
+    attributes:
+      label: Security considerations
+      description: |
+        RustArcade never runs shell commands from manifests, never asks for administrator
+        privileges and only writes inside its own data directory. Does the proposal keep that?

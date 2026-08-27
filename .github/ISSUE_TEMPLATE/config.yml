@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and ideas
+    url: https://github.com/michelbr84/RustArcade/discussions
+    about: Ask how something works or discuss an idea before opening an issue.
+  - name: Security vulnerability
+    url: https://github.com/michelbr84/RustArcade/security/advisories/new
+    about: Please report security problems privately, not as public issues.

@@ -5,7 +5,9 @@ contributions: adding a game to the catalog and changing the launcher itself.
 
 ## Ground rules
 
-- Be kind and constructive in issues and reviews.
+- Be kind and constructive in issues and reviews; the [Code of Conduct](CODE_OF_CONDUCT.md) applies everywhere.
+- Use the issue forms: *Bug report*, *Game request* and *Feature request*. Questions go to
+  [Discussions](https://github.com/michelbr84/RustArcade/discussions).
 - Keep the security model intact: manifests stay declarative, installers stay typed, no shell
   execution, no privilege escalation. If a change needs any of these, open an issue first.
 - Every change must keep the quality gates green:

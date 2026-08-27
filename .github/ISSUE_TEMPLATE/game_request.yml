@@ -1,0 +1,52 @@
+name: Game request
+description: Suggest a terminal game for the catalog.
+labels: ["catalog"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every catalog entry is one declarative TOML file — see `docs/ADDING-A-GAME.md`.
+        If you can, open a pull request with the manifest instead; either way, the details below
+        let a maintainer verify the game quickly.
+  - type: input
+    id: repository
+    attributes:
+      label: Repository URL (https)
+      placeholder: https://github.com/owner/game
+    validations:
+      required: true
+  - type: dropdown
+    id: installers
+    attributes:
+      label: How can it be installed?
+      multiple: true
+      options:
+        - GitHub release with prebuilt binaries
+        - Published on crates.io with a binary target
+        - Builds from source with plain `cargo build --release`
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: executable
+    attributes:
+      label: Executable name produced by the build
+      placeholder: chess-tui
+  - type: input
+    id: license
+    attributes:
+      label: License
+      placeholder: MIT
+  - type: checkboxes
+    id: platforms
+    attributes:
+      label: Platforms known to work
+      options:
+        - label: Linux
+        - label: macOS
+        - label: Windows
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything a player should know?
+      description: Runtime dependencies (e.g. a chess engine), minimum terminal size, native build libraries, quirks.
