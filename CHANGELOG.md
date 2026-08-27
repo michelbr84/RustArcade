@@ -6,6 +6,9 @@ All notable changes to RustArcade are documented here. The format follows
 
 ## [Unreleased]
 
+### Changed
+- README: install from crates.io (`cargo install rustarcade`) and status badges.
+
 ## [0.1.0] - 2026-08-27
 
 Initial release.

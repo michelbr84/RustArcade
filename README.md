@@ -4,6 +4,10 @@
 
 **Your terminal. Your arcade.**
 
+[![CI](https://github.com/michelbr84/RustArcade/actions/workflows/ci.yml/badge.svg)](https://github.com/michelbr84/RustArcade/actions/workflows/ci.yml)
+[![crates.io](https://img.shields.io/crates/v/rustarcade.svg)](https://crates.io/crates/rustarcade)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 A Rust-powered terminal game launcher. Discover, install, update, and play open-source TUI and CLI
 games directly from one terminal interface.
 
@@ -60,14 +64,14 @@ interface, hands the terminal to the game, and brings you back when it exits.
 RustArcade is a single binary. Requirements: a terminal of at least 60×16 characters; Cargo
 and Git are optional and only needed for games that build from source.
 
-**From source (Rust 1.88+):**
+**From crates.io (Rust 1.88+):**
 
 ```bash
-cargo install --git https://github.com/michelbr84/RustArcade rustarcade
+cargo install rustarcade
 ```
 
-or clone the repository and run `cargo build --release`; the binary is at
-`target/release/rustarcade`.
+**From source:** `cargo install --git https://github.com/michelbr84/RustArcade rustarcade`, or
+clone the repository and run `cargo build --release` (binary at `target/release/rustarcade`).
 
 **Prebuilt binaries** for Linux (x86_64, aarch64), macOS (Intel, Apple Silicon) and Windows
 (x86_64) are attached to each GitHub release together with SHA-256 checksums.
