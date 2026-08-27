@@ -810,6 +810,14 @@ pub(crate) mod tests {
         assert!(check_entry_path("x", Path::new("")).is_err());
         assert!(check_entry_path("x", Path::new("../a")).is_err());
         assert!(check_entry_path("x", Path::new("/a")).is_err());
+        // Backslashes are ordinary file-name characters on Unix (so `a\b` is one suspicious
+        // component) but path separators on Windows (so it is the safe path `a/b`).
+        #[cfg(unix)]
         assert!(check_entry_path("x", Path::new("a\\b")).is_err());
+        #[cfg(windows)]
+        assert_eq!(
+            check_entry_path("x", Path::new("a\\b")).unwrap(),
+            PathBuf::from("a").join("b")
+        );
     }
 }

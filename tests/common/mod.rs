@@ -165,6 +165,24 @@ impl TestEnv {
             .env("RUSTARCADE_CRATES_API", &self.endpoints.crates_io)
             .env("TERM", "dumb")
             .env("NO_COLOR", "1");
+        // Windows child processes need these to load system DLLs, use networking and find tools.
+        for name in [
+            "SystemRoot",
+            "SYSTEMROOT",
+            "PATHEXT",
+            "TEMP",
+            "TMP",
+            "USERPROFILE",
+            "APPDATA",
+            "LOCALAPPDATA",
+            "COMSPEC",
+            "ProgramData",
+            "SystemDrive",
+        ] {
+            if let Some(value) = std::env::var_os(name) {
+                cmd.env(name, value);
+            }
+        }
         if let Some(cargo_home) = std::env::var_os("CARGO_HOME") {
             cmd.env("CARGO_HOME", cargo_home);
         }
